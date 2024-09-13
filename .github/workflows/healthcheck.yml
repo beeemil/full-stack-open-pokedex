@@ -16,6 +16,8 @@ jobs:
       - name: Check pokedex health
         uses: jtalk/url-health-check-action@v4
         with:
-          url: https://full-stack-open-pokedex-ne3o.onrender.com/health|https://full-stack-open-pokedex-ne3o.onrender.com/|https://full-stack-open-pokedex-ne3o.onrender.com/pokemon/bulbasaur
+          url: |
+            https://full-stack-open-pokedex-ne3o.onrender.com/health
+            https://full-stack-open-pokedex-ne3o.onrender.com/
           max-attempts: 3
           retry-delay: 5s
