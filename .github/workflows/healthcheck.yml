@@ -2,17 +2,13 @@ name: Periodic HealthCheck
 
 on:
   schedule:
-    - cron: '30 14 * * 5'
+    - cron: '30 16 * * 5'
 
 
 jobs:
   test_schedule:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
       - name: Check pokedex health
         uses: jtalk/url-health-check-action@v4
         with:
