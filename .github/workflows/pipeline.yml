@@ -44,8 +44,8 @@ jobs:
         if: failure()
         with:
           title: Failure
-          color: "#FF3333"
-          message: Build failed
+          color: #FF3333
+          message: "**${{ github.event.pull_request.title }}**\n**Creator:** ${{ github.event.pull_request.user.login }}\n${{ github.event.pull_request.html_url }}"
           webhook_url: ${{ secrets.DISCORD_WEBHOOK }}
   
   tag_release:
@@ -68,7 +68,7 @@ jobs:
         if: success()
         with:
           title: Success
-          color: "#1DC249"
+          color: #1DC249
           message: A new version of pokedex deployed
           webhook_url: ${{ secrets.DISCORD_WEBHOOK }}
       - name: Fail
@@ -76,6 +76,6 @@ jobs:
         if: failure()
         with:
           title: Failure
-          color: "#FF3333"
-          message: Build failed
+          color: #FF3333
+          message: "**${{ github.event.pull_request.title }}**\n**Creator:** ${{ github.event.pull_request.user.login }}\n${{ github.event.pull_request.html_url }}"
           webhook_url: ${{ secrets.DISCORD_WEBHOOK }}
