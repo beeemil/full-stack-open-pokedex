@@ -59,7 +59,7 @@ jobs:
         if: success()
         with:
           title: Success
-          color: #1DC249
+          color: "#1DC249"
           message: A new version of pokedex deployed
           webhook_url: ${{ secrets.DISCORD_WEBHOOK }}
       - name: Fail
@@ -67,6 +67,6 @@ jobs:
         if: failure()
         with:
           title: Failure
-          color: #FF3333
+          color: "#FF3333"
           message: Build failed
           webhook_url: ${{ secrets.DISCORD_WEBHOOK }}
