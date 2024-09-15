@@ -44,7 +44,7 @@ jobs:
         if: failure()
         with:
           title: Failure
-          color: '#ff3333'
+          colour: '#ff3333'
           message: "${{ github.event.commits[0].url }}\n by **${{ github.event.commits[0].author.name }}** broke the build"
           webhook_url: ${{ secrets.DISCORD_WEBHOOK }}
   
@@ -68,7 +68,7 @@ jobs:
         if: success()
         with:
           title: Success
-          color: '#1dc249'
+          colour: '#1dc249'
           message: A new version of pokedex deployed
           webhook_url: ${{ secrets.DISCORD_WEBHOOK }}
       - name: Fail
@@ -76,6 +76,6 @@ jobs:
         if: failure()
         with:
           title: Failure
-          color: '#ff3333'
+          colour: '#ff3333'
           message: "${{ github.event.commits[0].url }}\n by **${{ github.event.commits[0].author.name }}** broke the build"
           webhook_url: ${{ secrets.DISCORD_WEBHOOK }}
